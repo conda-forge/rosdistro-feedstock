@@ -1,6 +1,6 @@
 {% set name = "rosdistro" %}
-{% set version = "0.7.4" %}
-{% set sha256 = "94caf9c03142744cbcd1ab926a216ee64d5e1d27c35c15c7262565761f3a053c" %}
+{% set version = "0.7.5" %}
+{% set sha256 = "075c1c66c6e20a3e5af0a8e1f8ad3d82bcf990e148cf73966321818a831204c1" %}
 
 package:
   name: {{ name|lower }}
@@ -49,3 +49,4 @@ extra:
   recipe-maintainers:
     - wolfv
     - lesteve
+    - seanyen
