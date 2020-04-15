@@ -1,6 +1,6 @@
 {% set name = "rosdistro" %}
-{% set version = "0.8.0" %}
-{% set sha256 = "1e39851bd3bcb781d127b260c1803ee554a7813927fdb3b16605449d9fcb67b8" %}
+{% set version = "0.8.1" %}
+{% set sha256 = "d3f859a48d895b922253b29d6a7818b9a3ccc71268bec585fa6542c59fc6a24c" %}
 
 package:
   name: {{ name|lower }}
@@ -42,7 +42,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
-  summary: 'Tools to work with catkinized rosdistro files'
+  summary: Tools to work with catkinized rosdistro files
   dev_url: https://github.com/ros-infrastructure/rosdistro
 
 extra:
