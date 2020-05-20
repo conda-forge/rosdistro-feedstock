@@ -1,6 +1,6 @@
 {% set name = "rosdistro" %}
-{% set version = "0.8.1" %}
-{% set sha256 = "d3f859a48d895b922253b29d6a7818b9a3ccc71268bec585fa6542c59fc6a24c" %}
+{% set version = "0.8.2" %}
+{% set sha256 = "ca6e7955820658781bde572927895c2ae8d89c37d5d891a254fd9cc29f9904a6" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
