@@ -11,7 +11,7 @@ source:
   url: https://github.com/ros-infrastructure/{{ name }}/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
     patches:
-      - add_robostack_source.patch  # [unix]
+      - add_robostack_source.patch
 
 build:
   number: 3
