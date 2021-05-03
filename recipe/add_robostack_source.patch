@@ -1,0 +1,11 @@
+diff --git a/rosdep/sources.list.d/20-default.list b/rosdep/sources.list.d/20-default.list
+index fb6744c4d4a..9f5daefec63 100644
+--- a/rosdep/sources.list.d/20-default.list
++++ b/rosdep/sources.list.d/20-default.list
+@@ -1,5 +1,6 @@
+ # os-specific listings first
+ yaml https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml osx
++yaml https://raw.githubusercontent.com/RoboStack/ros-noetic/master/robostack.yaml
+ 
+ # generic
+ yaml https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml
