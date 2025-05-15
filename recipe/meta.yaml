@@ -1,5 +1,5 @@
 {% set name = "rosdistro" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 {% set sha256 = "b49d9c3c65cc1dff3b56ba61559d70439597417491e1525e4e314f15503517f9" %}
 
 package:
@@ -12,19 +12,23 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+  entry_points:
+    - rosdistro_build_cache = rosdistro.cli.rosdistro_build_cache:main
+    - rosdistro_freeze_source = rosdistro.cli.rosdistro_freeze_source:main
+    - rosdistro_migrate_to_rep_141 = rosdistro.cli.rosdistro_migrate_to_rep_141:main
+    - rosdistro_migrate_to_rep_143 = rosdistro.cli.rosdistro_migrate_to_rep_143:main
+    - rosdistro_reformat = rosdistro.cli.rosdistro_reformat:main
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python
+    - python >={{ python_min }}
     - setuptools
     - pyyaml
     - catkin_pkg
@@ -39,6 +43,8 @@ test:
     - rosdistro_reformat --help
   imports:
     - rosdistro
+  requirements:
+    - python {{ python_min }}
 
 about:
   home: http://wiki.ros.org/rosdistro
@@ -52,3 +58,5 @@ extra:
   recipe-maintainers:
     - wolfv
     - seanyen
+    - traversaro
+  
