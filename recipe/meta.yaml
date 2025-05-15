@@ -43,8 +43,9 @@ test:
     - rosdistro_reformat --help
   imports:
     - rosdistro
-  requirements:
+  requires:
     - python {{ python_min }}
+    - pip
 
 about:
   home: http://wiki.ros.org/rosdistro
