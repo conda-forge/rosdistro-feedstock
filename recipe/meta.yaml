@@ -1,6 +1,6 @@
 {% set name = "rosdistro" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "69c363fd55310af2b64d7012a990c51e9ad7e06bd23adeb2a259e076cef6da59" %}
+{% set version = "1.0.1" %}
+{% set sha256 = "aeb1b2f5c065b79840df979f2c4e11ee05328eb6e86e8df9111019a4f0e42260" %}
 
 package:
   name: {{ name|lower }}
@@ -60,4 +60,4 @@ extra:
     - wolfv
     - seanyen
     - traversaro
-  
+
