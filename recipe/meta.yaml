@@ -1,6 +1,6 @@
 {% set name = "rosdistro" %}
-{% set version = "1.0.1" %}
-{% set sha256 = "aeb1b2f5c065b79840df979f2c4e11ee05328eb6e86e8df9111019a4f0e42260" %}
+{% set version = "1.1.0" %}
+{% set sha256 = "4b30eb3d7b81ea1e4c4978c716a838856d0f39b33450724dd2189e8b46692e25" %}
 
 package:
   name: {{ name|lower }}
